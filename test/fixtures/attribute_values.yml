@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: attribute_values
+#
+#  id                          :bigint(8)        not null, primary key
+#  attribute_value_description :string
+#  attribute_value_name        :string
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#  attribute_id                :bigint(8)
+#
+# Indexes
+#
+#  index_attribute_values_on_attribute_id  (attribute_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (attribute_id => attributes.id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attribute: one
+  attribute_value_name: MyString
+  attribute_value_desc: MyString
+
+two:
+  attribute: two
+  attribute_value_name: MyString
+  attribute_value_desc: MyString
