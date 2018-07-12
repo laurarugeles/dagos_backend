@@ -1,4 +1,5 @@
 class ProductTypesController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_product_type, only: [:show, :edit, :update, :destroy]
 
   # GET /product_types
