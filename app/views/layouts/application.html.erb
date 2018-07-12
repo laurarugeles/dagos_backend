@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    
+    <% if current_admin %>
+      <div class='menu'>
+        <ul id='horizontal-list'>
+          <li><%= link_to 'products', products_path %></li>
+          <li><%= link_to 'products_types', product_types_path %></li>
+          <li><%= link_to 'attributes', attributes_path %></li>
+        </ul>
+        <div class='header'>
+          <span> Hello <%= current_admin.try(:email) %> </span>
+          <%= link_to 'Log out', destroy_admin_session_path, method: :delete %>
+        </div>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= form.label :product_name %>
     <%= form.text_field :product_name %>
@@ -24,6 +23,11 @@
   <div class="field">
     <%= form.label :product_price %>
     <%= form.number_field :product_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_type %>
+    <%= form.select :product_type_id, ProductType.all.pluck(:product_type_name, :id) %>
   </div>
 
   <div class="actions">

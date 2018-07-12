@@ -5,6 +5,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  position: relative;
 }
 
 p, ol, ul, td {
@@ -81,4 +82,26 @@ div {
 
 label {
   display: block;
+}
+
+ul#horizontal-list {
+  padding-right: 0px !important;
+	min-width: 696px;
+	list-style: none;
+  padding-top: 20px;
+  display: inline;
+}
+
+ul#horizontal-list li {
+		display: inline;
+}
+
+.header{
+  display: inline-block;
+}
+
+.menu{
+  width: 40%;
+  right: 0px;
+  position: absolute;
 }
